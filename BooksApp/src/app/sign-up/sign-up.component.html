@@ -1,0 +1,66 @@
+<div class="body">
+<div class="container">
+<form [formGroup]="signupForm">
+
+<div class="form-group" [ngClass]="{'has-error': 
+     signupForm.get('name').errors && (signupForm.get('name').dirty || signupForm.get('name').touched)}">
+
+<label>Name</label>
+<input type="text" placeholder="Name" formControlName="name" class="form-control">
+ <div class="help-block" *ngIf="signupForm.get('name').errors 
+            && (signupForm.get('name').dirty || signupForm.get('name').touched)">          
+            <div *ngIf="signupForm.get('name').errors.required">Name is required</div>
+           </div> 
+        </div> 
+
+<div class="form-group" [ngClass]="{'has-error': 
+     signupForm.get('email').errors && (signupForm.get('email').dirty || signupForm.get('email').touched)}" >
+<label>Email</label>
+<input type="text" placeholder="Email" formControlName="email" class="form-control">
+<div class="text-danger" *ngIf="signupForm.get('email').errors 
+            && (signupForm.get('email').dirty || signupForm.get('email').touched)">          
+            <div *ngIf="signupForm.get('email').errors.required">Email is required</div>
+            <div *ngIf="signupForm.get('email').errors.pattern">Enter Valid email address</div>
+           </div> 
+       </div>
+
+<div class="form-group" [ngClass]="{'has-error': 
+       signupForm.get('username').errors && (signupForm.get('username').dirty || signupForm.get('username').touched)}" >
+<label>Username</label>
+<input type="text" placeholder="Username" formControlName="username" class="form-control">
+<div class="help-block" *ngIf="signupForm.get('username').errors 
+            && (signupForm.get('username').dirty || signupForm.get('username').touched)">          
+            <div *ngIf="signupForm.get('username').errors.required">Username is required</div>
+           
+
+           </div> 
+       </div>
+
+<div class="form-group" [ngClass]="{'has-error': 
+       signupForm.get('contactno').errors && (signupForm.get('contactno').dirty || signupForm.get('contactno').touched)}" >
+<label>ContactNo</label>
+<input type="tel" placeholder="ContactNo" formControlName="contactno" class="form-control">
+<div class="help-block" *ngIf="signupForm.get('contactno').errors 
+            && (signupForm.get('contactno').dirty || signupForm.get('contactno').touched)">          
+            <div *ngIf="signupForm.get('contactno').errors.required">ContactNo is required</div>
+            <div *ngIf="signupForm.get('contactno').errors.maxLength">ContactNo should be of 10 digits</div>
+
+           </div> 
+       </div>
+
+<div class ="form-group" [ngClass]="{'has-error': 
+     signupForm.get('password').errors && (signupForm.get('password').dirty || signupForm.get('password').touched)}" >
+           <label>Password</label>
+           <input type="password" formControlName="password" placeholder="Password" class="form-control">
+           <div class="help-block" *ngIf="signupForm.get('password').errors 
+            && (signupForm.get('password').dirty || signupForm.get('password').touched)">          
+            <div *ngIf="signupForm.get('password').errors.required">Password is required</div>
+            <div *ngIf="signupForm.get('password').errors.pattern">Enter Valid Password</div>
+
+           </div> 
+       </div>
+<button class="btn btn-primary" (click)="signUp()">SignUp</button>
+
+</form>
+</div>
+</div>

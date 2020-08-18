@@ -1,0 +1,36 @@
+{
+  "RegisteredUsers": [
+    {
+      "id": 1,
+      "name": "Supriya Bagle",
+      "username": "Supriya",
+      "email": "supriya@gmail.com",
+      "contactno": "8983159480",
+      "password": "Sup123"
+    },
+    {
+      "id": 2,
+      "name": "Tom Harries",
+      "username": "Tom",
+      "email": "Tom@Hotmail.com",
+      "contactno": "8983115485",
+      "password": "Tom123"
+    },
+    {
+      "id": 3,
+      "name": "Saurabh Bagle",
+      "username": "Saurabh",
+      "email": "Saurabh@hotmail.com",
+      "contactno": "8982154785",
+      "password": "Sau456"
+    },
+    {
+      "id": 4,
+      "name": "Mosh Hamedani",
+      "username": "Mosh",
+      "email": "mosh@gmail.com",
+      "contactno": "8983654521",
+      "password": "Mosh123"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<h3>Select the category</h3>
+<li *ngFor= "let category of categoriesNames"
+[class.selected]="selectedcategory===category"
+(click)="onSelect(category)">
+{{category.name}} 
+</li>  
+
+<br>
+<hr>
+<div *ngIf="selectedcategory">
+    <h2>{{selectedcategory.name | uppercase}} </h2>
+        
+        <div *ngFor="let book of data" >
+            <img src="{{book.image}}"><br>
+            {{book.name}}<br>
+            Price :{{book.price}}<br>
+ <button class="btn btn-primary" (click)="addToCart(book)">AddToCart</button><br>
+
+        </div>
+
+ </div>
+
+
+
+
+
+
